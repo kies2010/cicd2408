@@ -42,7 +42,7 @@ jobs:
     - name: Get JAR file path
       id: get_jar_path
       run: |
-        JAR_PATH=$(find aks-cicd-study-main/backend-java/build/libs -name '*.jar' | head -n 1)
+        JAR_PATH=$(find backend-java/build/libs -name '*.jar' | head -n 1)
         if [ -z "$JAR_PATH" ]; then
           echo "No JAR file found!"
           exit 1
